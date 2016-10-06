@@ -13,13 +13,42 @@
   "keywords": [
     "react-native",
     "picker",
-	"wheel"
+    "wheel"
   ],
-  "author": "Yu Zheng",
+  "author": {
+    "name": "Yu Zheng"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lesliesam/react-native-wheel-picker/issues"
   },
   "homepage": "https://github.com/lesliesam/react-native-wheel-picker#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "gitHead": "beaf8f77129db95df673b29b29d0086e3d4fa9d2",
+  "_id": "react-native-wheel-picker@1.1.0",
+  "_shasum": "3987b4dd50d98c1f72b27b524df47fb9065c44bd",
+  "_from": "react-native-wheel-picker@1.1.0",
+  "_npmVersion": "3.10.3",
+  "_nodeVersion": "6.3.1",
+  "_npmUser": {
+    "name": "lesliesam",
+    "email": "lesliesam@hotmail.com"
+  },
+  "dist": {
+    "shasum": "3987b4dd50d98c1f72b27b524df47fb9065c44bd",
+    "tarball": "https://registry.npmjs.org/react-native-wheel-picker/-/react-native-wheel-picker-1.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "lesliesam",
+      "email": "lesliesam@hotmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/react-native-wheel-picker-1.1.0.tgz_1474191894620_0.9571606433019042"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/react-native-wheel-picker/-/react-native-wheel-picker-1.1.0.tgz",
+  "readme": "ERROR: No README data found!"
 }
