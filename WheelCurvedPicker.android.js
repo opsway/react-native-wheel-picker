@@ -1,40 +1,33 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
 	View,
+  ViewPropTypes,
 	ColorPropType,
 	requireNativeComponent,
 } from 'react-native';
+var createReactClass = require('create-react-class');
 
-
-var WheelCurvedPicker = React.createClass ({
+var WheelCurvedPicker = createReactClass ({
 
 	propTypes: {
-		...View.propTypes,
-
-		data: React.PropTypes.array,
-
+		...ViewPropTypes,
+		data: PropTypes.array,
 		textColor: ColorPropType,
-
-		textSize: React.PropTypes.number,
-
-		itemStyle: React.PropTypes.object,
-
-		itemSpace: React.PropTypes.number,
-
-		onValueChange: React.PropTypes.func,
-
-		selectedValue: React.PropTypes.any,
-
-		selectedIndex: React.PropTypes.number,
-
+		textSize: PropTypes.number,
+		itemStyle: PropTypes.object,
+		itemSpace: PropTypes.number,
+		onValueChange: PropTypes.func,
+		selectedValue: PropTypes.any,
+		selectedIndex: PropTypes.number,
 		selectedLineColor: ColorPropType,
 	},
 
 	getDefaultProps(): Object {
 		return {
-			itemStyle : {color:"white", fontSize:26},
+			itemStyle: {color:"white", fontSize:26},
 			itemSpace: 20,
 			selectedLineColor: "black",
 		};
@@ -51,6 +44,7 @@ var WheelCurvedPicker = React.createClass ({
 	_stateFromProps: function(props) {
 		var selectedIndex = 0;
 		var items = [];
+
 		React.Children.forEach(props.children, function (child, index) {
 			if (child.props.value === props.selectedValue) {
 				selectedIndex = index;
@@ -58,8 +52,8 @@ var WheelCurvedPicker = React.createClass ({
 			items.push({value: index, theValue: child.props.value, label: child.props.label});
 		});
 
-		var textSize = props.itemStyle.fontSize
-		var textColor = props.itemStyle.color
+		var textSize = props.itemStyle.fontSize;
+		var textColor = props.itemStyle.color;
 
 		return {selectedIndex, items, textSize, textColor};
 	},
@@ -83,10 +77,10 @@ var WheelCurvedPicker = React.createClass ({
 	}
 });
 
-WheelCurvedPicker.Item = React.createClass({
+WheelCurvedPicker.Item = createReactClass({
 	propTypes: {
-		value: React.PropTypes.any, // string or integer basically
-		label: React.PropTypes.string,
+		value: PropTypes.any, // string or integer basically
+		label: PropTypes.string,
 	},
 
 	render: function() {
